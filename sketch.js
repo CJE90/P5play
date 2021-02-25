@@ -16,7 +16,6 @@ function draw() {
       fill(140, 140, 0);
       ellipse(x, y, 20, 20);
       fill(140, 190, 140);
-      x += speed;
       ellipse(x, y, 10, 10);
     }
   }
