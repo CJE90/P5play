@@ -1,7 +1,8 @@
-function Cell(i, j, runsum) {
+function Cell(i, j) {
     this.i = i;
     this.j = j;
     this.walls = [true, true, true, true]; //Top, Right, Bottom, Left
+    this.visited = false;
 
 
     this.show = function () {
@@ -20,6 +21,11 @@ function Cell(i, j, runsum) {
         if (this.walls[3]) {
             line(x, y + w, x, y);
         }
+        if (this.visited) {
+            fill(255, 0, 255, 100);
+            rect(x, y, w, w);
+        }
+
     }
 
 }
